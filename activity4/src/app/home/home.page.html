@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        
+        <ion-list>
+
+          <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <ion-item>
+              <ion-label>Username:</ion-label>
+              <ion-input type="text" formControlName="username"></ion-input>
+            </ion-item>
+  
+            <ion-item>
+              <ion-label>Password:</ion-label>
+              <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+
+            <ion-button expand="full" (click)="login()">Login</ion-button>
+            <p class="ion-text-center">Don't have an account? <a [routerLink]="['/register']">Register</a></p>
+          </form>
+
+        </ion-list>
+
+        <!--<ion-button expand="full" [routerLink]="['/login']">login</ion-button>-->
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

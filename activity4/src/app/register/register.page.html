@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+
+    <!--go back-->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        
+        <ion-list>
+
+          <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <ion-item>
+              <ion-label>First Name:</ion-label>
+              <ion-input type="text" formControlName="firstName"></ion-input>
+            </ion-item>
+  
+            <ion-item>
+              <ion-label>Last Name:</ion-label>
+              <ion-input type="text" formControlName="lastName"></ion-input>
+            </ion-item>
+  
+            <ion-item>
+              <ion-label>Username:</ion-label>
+              <ion-input type="text" formControlName="username"></ion-input>
+            </ion-item>
+  
+            <ion-item>
+              <ion-label>Password:</ion-label>
+              <ion-input type="Password" formControlName="password"></ion-input>
+            </ion-item>
+
+            <ion-button expand="full" type="submit">Register</ion-button>
+          </form>
+
+        </ion-list>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
